@@ -3,7 +3,6 @@
 **Centro Universitário de Brusque – UNIFEBE**  
 Curso: Sistemas de Informação | Disciplina: Sistemas Operacionais – SI03A  
 Professor: Sidnei Baron
-
 Alunos: Lucas Schwarz Baptista,Lucas Gianesini, Vinicius Imhof Waldrigues, Matheus Guilherme.
 
 ---
