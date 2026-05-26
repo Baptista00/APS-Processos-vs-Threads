@@ -1,0 +1,13 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+*.class
+
+# Arquivos temporários Java
+*.bin
+aps_matriz*.bin
+aps_res_*.bin
+
+# Compilados
+bin/
