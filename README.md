@@ -4,8 +4,6 @@
 Curso: Sistemas de Informação | Disciplina: Sistemas Operacionais – SI03A  
 Professor: Sidnei Baron
 
-Alunos: Lucas Schwarz Baptista, Vicius Imhof Waldrigues, Lucas Gianesini e Matheus Guilherme
-
 ---
 
 ## Objetivo
@@ -41,11 +39,13 @@ Requer Java 17+.
 
 | Unidades | Threads (ms) | Processos (ms) |
 |----------|-------------|----------------|
-| 2        | 1.629,2     | 2.006,2        |
-| 4        | 754,6       | 1.317,6        |
-| 8        | 648,2       | 1.497,8        |
+| 2        | 2.086,2     | 2.350,0        |
+| 4        | 926,4       | 1.660,4        |
+| 8        | 1.058,4     | 1.790,0        |
 
-> Matriz 1000×1000 | 5 execuções por cenário (1ª descartada como aquecimento da JVM)
+> Matriz 1000×1000 | 5 execuções por cenário (1ª descartada como aquecimento da JVM) | Java 26 (OpenJDK)
+
+**Validação:** ✓ Os dois métodos produziram resultados numericamente idênticos.
 
 ## Estratégia de Comunicação entre Processos
 
@@ -63,5 +63,5 @@ usando seeds fixas para geração das matrizes (`seed_A = 42`, `seed_B = 123`).
 - **Threads foram mais rápidas** em todos os cenários — sem overhead de inicialização de JVM e com acesso direto à memória compartilhada
 - **Processos consumiram mais memória** — cada JVM aloca seu próprio heap (~300 MB por instância)
 - **Processos oferecem maior isolamento** — falha em um processo não afeta os demais
-- **Escalabilidade das Threads** foi significativa (1.629ms → 648ms com 8 threads)
-- **Processos degradaram com 8 unidades** — overhead de criação de JVMs supera o ganho de paralelismo
+- **Escalabilidade das Threads** foi expressiva de 2 para 4 unidades (2.086ms → 926ms, ganho de ~2,25×)
+- **Com 8 unidades**, ambas as versões sofreram leve degradação, indicando saturação dos núcleos físicos disponíveis
