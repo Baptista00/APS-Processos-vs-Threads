@@ -35,8 +35,6 @@ javac -d bin src/*.java
 java -cp bin Main
 ```
 
-Requer Java 17+.
-
 ## Resultados Obtidos
 
 | Unidades | Threads (ms) | Processos (ms) |
