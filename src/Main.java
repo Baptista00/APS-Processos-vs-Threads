@@ -259,8 +259,9 @@ public class Main {
             arquivosResultado.add(tmpResultado);
 
             // Comando para iniciar nova JVM executando ProcessoWorker
+            String javaExec = ProcessHandle.current().info().command().orElse("java");
             ProcessBuilder pb = new ProcessBuilder(
-                "java", "-cp", classpath,
+                    javaExec, "-cp", classpath,
                 "ProcessoWorker",
                 tmpA.getAbsolutePath(),
                 tmpB.getAbsolutePath(),
