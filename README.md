@@ -4,6 +4,8 @@
 Curso: Sistemas de Informação | Disciplina: Sistemas Operacionais – SI03A  
 Professor: Sidnei Baron
 
+Alunos: Lucas Schwarz Baptista, Vicius Imhof Waldrigues, Lucas Gianesini e Matheus Guilherme
+
 ---
 
 ## Objetivo
