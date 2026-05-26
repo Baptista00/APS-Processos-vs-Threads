@@ -42,7 +42,7 @@ Requer Java 11+.
 | 4        | 1.680,4     | 3.695,4        |
 | 8        | 1.678,6     | 5.530,4        |
 
-> Matriz 1000×1000 | 5 execuções por cenário (1ª descartada como aquecimento) | Java 21 (OpenJDK)
+> Matriz 1000×1000 | 5 execuções por cenário (1ª descartada como aquecimento) 
 
 ## Estratégia de Comunicação entre Processos
 
